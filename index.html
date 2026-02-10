@@ -176,17 +176,20 @@ h1 {
   color: #999;
 }
 
+/* =========================
+   BIGGER IMAGES (UPDATED)
+   ========================= */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* was 150px */
+  gap: 16px; /* was 12px */
   margin-top: 16px;
 }
 
 .photo-thumb {
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2; /* was 4/3 */
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 6px; /* slightly nicer with larger thumbs */
   cursor: pointer;
   background: #e0e0e0;
   position: relative;
@@ -243,9 +246,12 @@ h1 {
   position: relative;
 }
 
+/* =========================
+   BIGGER LIGHTBOX (UPDATED)
+   ========================= */
 .lightbox-image {
-  max-width: 100%;
-  max-height: 85vh;
+  max-width: 95vw;   /* was 100% */
+  max-height: 90vh;  /* was 85vh */
   display: block;
 }
 
@@ -453,9 +459,10 @@ h1 {
   .controls button {
     width: 100%;
   }
-  
+
+  /* Bigger than before on mobile too */
   .photo-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* was 100px */
   }
   
   .lightbox-nav {
@@ -617,7 +624,7 @@ let entries = [
     ],
     photos: [
       { src: "images/2025-W2-1.jpg", caption: "Groundwork progress" },
-      { src: "images/2025-W2-2.jpg", caption: "Heavy equipment" },
+      { src: "images/2025-W2-2.jpg", caption: "Heavy equipment" }
     ]
   }
 ];
